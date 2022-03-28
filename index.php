@@ -14,6 +14,6 @@
     <area target="" alt="Log in" title="Log in" href="kategorier.php" coords="385,755,171,508" shape="rect">
 </map>
 
-HEJEHEJEHJ
+
 </body>
 </html>
