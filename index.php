@@ -1,3 +1,10 @@
+<?php
+include "mysql.php";
+
+$conn;
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
