@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Apr 04, 2022 at 02:02 PM
+-- Generation Time: Apr 05, 2022 at 09:26 AM
 -- Server version: 10.4.21-MariaDB
 -- PHP Version: 8.0.12
 
@@ -20,37 +20,43 @@ SET time_zone = "+00:00";
 --
 -- Database: `stark`
 --
+CREATE DATABASE IF NOT EXISTS `stark` DEFAULT CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci;
+USE `stark`;
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `customer`
+-- Table structure for table `kunder`
 --
 
-CREATE TABLE `customer` (
-  `ID` int(11) NOT NULL,
-  `Name` varchar(11) NOT NULL,
-  `Adress` varchar(11) NOT NULL,
-  `Phone` int(11) NOT NULL,
-  `Credit` int(11) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+CREATE TABLE IF NOT EXISTS `kunder` (
+  `ID` int(11) NOT NULL AUTO_INCREMENT,
+  `Navn` varchar(255) NOT NULL,
+  `Telefon` int(11) DEFAULT NULL,
+  `Email` varchar(255) DEFAULT NULL,
+  `Kortnummer` int(11) DEFAULT NULL,
+  PRIMARY KEY (`ID`)
+) ENGINE=InnoDB AUTO_INCREMENT=15 DEFAULT CHARSET=utf8mb4;
 
 --
--- Dumping data for table `customer`
+-- Dumping data for table `kunder`
 --
 
-INSERT INTO `customer` (`ID`, `Name`, `Adress`, `Phone`, `Credit`) VALUES
-(0, 'Soren Hej', 'Nyborgvej', 42805676, 123456);
-
---
--- Indexes for dumped tables
---
-
---
--- Indexes for table `customer`
---
-ALTER TABLE `customer`
-  ADD UNIQUE KEY `ID` (`ID`);
+INSERT INTO `kunder` (`ID`, `Navn`, `Telefon`, `Email`, `Kortnummer`) VALUES
+(1, 'soren soren', 12345678, 'soren@hej.com', 123123123),
+(2, 'soren', 1234, '1234', 12345),
+(3, '', 0, '', 0),
+(4, 'hej', 1234, '1234', 1234),
+(5, 'tho', 1234, 'tho', 1234),
+(6, '', 0, '', 0),
+(7, '', 0, '', 0),
+(8, '', 0, '', 0),
+(9, 'hej', 123121, 'hehehe', 1231231),
+(10, 'asdasdsada', 1231231231, 'asdasdqwe', 2147483647),
+(11, 'asdadasda', 123123131, 'asdasdasdas', 2147483647),
+(12, 'asdasda', 2147483647, 'hjhjhjhjhjhjhjhj', 2147483647),
+(13, 'lau', 123123213, 'jajsdjasjd', 2147483647),
+(14, 'lau lau', 1231231, '1231231', 123123123);
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
