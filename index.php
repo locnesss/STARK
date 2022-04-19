@@ -27,19 +27,6 @@ $conn;
 
 <?php
 
-/*
-$sql = "INSERT INTO customer (Name, Adress, Phone, Credit)
-VALUES ('Soren Hej', 'Nyborgvej', '42805676','123456')";
-
-if ($conn->query($sql) === TRUE) {
-  echo "New record created successfully";
-} else {
-  echo "Error: " . $sql . "<br>" . $conn->error;
-}
-
-$conn->close();
-
-*/
 
 
 ?>
